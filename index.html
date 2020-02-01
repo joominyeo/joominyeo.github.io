@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta property="og:url" content="joominyeo.me">
+  <meta property="og:title" content="Joo Min Yeo | Bringing things to life">
+  <meta property="og:description" content="This is my personal website. Thanks for visiting! -Joo Min Yeo-">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is my personal website. Thanks for visiting! -Joo Min Yeo-">
+  <meta name="author" content="Joo Min Yeo">
+  <meta description="Joo Min Yeo's Personal Website">
+
+  <title>Joo Min Yeo</title>
+
+  <link rel="shortcut icon" href="./img/logo.ico">
+
+  <!-- Bootstrap Core CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap Material Design CSS -->
+  <link href="./css/material-wfont.min.css" rel="stylesheet" type="text/css">
+  <link href="./css/ripples.min.css" rel="stylesheet" type="text/css">
+  <link href="./css/material.min.css" rel="stylesheet" type="text/css">
+
+  <!-- SweetAlert CSS -->
+  <link href="./css/sweet-alert.css" rel="stylesheet" type="text/css">
+
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="./font-awesome-4.6.1/css/font-awesome.min.css">
+
+  <!-- Custom Page CSS -->
+  <link href="./css/styles.css" rel="stylesheet">
+
+  <!-- Timeline CSS -->
+  <link href="./css/timeline.css" rel="stylesheet">
+
+  <!-- jQuery Version 1.11.0 -->
+  <script src="./js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="./js/bootstrap.min.js"></script>
+
+  <!-- Bootstrap Material Design JS -->
+  <script src="./js/ripples.min.js"></script>
+  <script src="./js/material.min.js"></script>
+
+  <!-- SweetAlert JS -->
+  <script src="./js/sweet-alert.min.js"></script>
+
+  <!-- Cheet.js -->
+  <script src="./js/cheet.min.js"></script>
+  <script src="./js/scripts.js"></script>
+
+  <!-- jQuery Version 1.11.0 -->
+  <script src="./js/jquery-1.11.0.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $.material.init();
+    });
+  </script>
+
+  <style>
+    /* Set the size of the div element that contains the map */
+      #map {
+        height: 800px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box">
+      <div class="row row-offcanvas row-offcanvas-left">
+
+        <!-- sidebar -->
+        <div class="column col-sm-2 col-xs-1 sidebar-offcanvas " id="sidebar">
+          <div id="logoimage">
+            <img src="./img/logo.gif" style="height: 100% ; width: 90% ; display:block; padding-left: 8%">
+          </div>
+          <hr id="pictureHR">
+          <ul class="nav">
+            <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+          </ul>
+
+          <ul class="nav hidden-xs " id="lg-menu">
+            <li id="about" class="withripple about-active active"><a href="#"><i class="fa fa-child"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Me</a></li>
+            <hr class="nomargin">
+            <li class="withripple" id="skills"><a href="#skills"><i class="fa fa-wrench"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skills</a></li>
+            <hr class="nomargin">
+            <li class="withripple" id="projects"><a href="#projects"><i class="fa fa-code"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects</a></li>
+            <hr class="nomargin">
+            <li class="withripple" id="hobby"><a href="#hobby"><i class="fa fa-rocket"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hobby</a></li>
+            <hr class="nomargin">
+            <li class="withripple" id="contact"><a href="#contact"><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact</a></li>
+            <hr class="nomargin">
+            <li class="withripple" id="resume"><a href="files/!Yeo_Joomin_Resume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resume</a></li>
+            <hr class="nomargin">
+            <li class="withripple" id="blog"><a href="https://caiyeo97.wixsite.com/wanderlustcai" target="_blank"><i class="fa fa-globe"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blog</a></li>
+            <hr class="nomargin">
+          </ul>
+
+          <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+            <hr class="nomargin">
+            <li class="withripple" id="English"><a href="http://joominyeo.me/#"><img src="./img/en.ico" alt="USA" style="height:25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English</a></li>
+            <hr class="nomargin">
+            <li class="withripple" id="Korean"><a href="/kr/#"><img src="./img/kr.ico" alt="KOR" style="height:25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Korean - editing</a></li>
+            <hr class="nomargin">
+            <li class="withripple" id="Espa&ntilde;ol"><a href="/es/#"><img src="./img/es.ico" alt="ESP" style="height:25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Espa&ntilde;ol - revisando</a></li>
+            <hr class="nomargin">
+            <li>
+              <h6>¬© <script type="text/javascript">
+                  document.write(new Date().getFullYear());
+                </script>, Joo Min Yeo.</h6>
+            </li>
+          </ul>
+
+          <!-- tiny only nav-->
+          <ul class="nav visible-xs" id="xs-menu">
+            <li id="about-xs" class="about-active"><a href="#about" class="text-center"><i class="fa fa-child"></i><span class="menuitemhide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Me</span></a></li>
+            <li id="skills-xs"><a href="#skills" class="text-center"><i class="fa fa-wrench"></i><span class="menuitemhide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skills</span></a></li>
+            <li id="projects-xs"><a href="#projects" class="text-center"><i class="fa fa-code"></i><span class="menuitemhide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects</span></a></li>
+            <li id="hobby-xs"><a href="#hobby" class="text-center"><i class="fa fa-rocket"></i><span class="menuitemhide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hobby</span></a></li>
+            <li id="contact-xs"><a href="#contact" class="text-center"><i class="fa fa-comments"></i><span class="menuitemhide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact</span></a></li>
+            <li id="resume-xs"><a href="files/!Yeo_Joomin_Resume.pdf" target="_blank" class="text-center"><i class="fa fa-clipboard"></i><span class="menuitemhide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resume</span></a></li>
+            <li id="blog-xs"><a href="https://caiyeo97.wixsite.com/wanderlustcai" target="_blank" class="text-center"><i class="fa fa-globe"></i><span class="menuitemhide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blog</span></a></li>
+          </ul>
+        </div>
+        <!-- /sidebar END -->
+
+        <!-- main right col -->
+        <div class="column col-sm-10 col-xs-11" id="main">
+
+          <!-- content for the "about me page" -->
+          <div class="contentdiv" id="aboutcontent">
+            <div class="aboutbanner banner shadow-z-2">
+              <div class="bannerpadding">
+                <h1>Hello there! I'm Joomin Yeo. aka "Cai"</h1>
+                <br>
+                <h4 style="color: #BAC4FF">I live for Mechatronics.</h4>
+              </div>
+            </div>
+            <div class="contentpadding">
+              <h3>A bit about me (or a nibble, or a byte)</h3>
+              <p>Third year electrical engineering student focusing on power systems--generation, transmission, distribution, and management of electricity as you know and use it from plants to your home and business.</p>
+              <br>
+              <p>This spring and summer, I will be at <a href="http://www.eskom.co.za/Pages/Landing.aspx" target="_blank"><b>Eskom</b></a>--a South African electrical utility company--to research the optimisation of generation, transmission, distribution, and management of electrical power systems and grid network. As a visiting researcher, I will be working at the National Control Centre in Germiston, just off the southeast corner of Johannesburg, where it controls 95% of South Africa's and 45% of the African continent's electricity. Check out my blog on the left for updates!</p>
+            </div>
+            <div class="contentpadding">
+              <h3>Check out my research project poster on <a href="https://docs.google.com/presentation/d/1Fki9iEIOhZCA95LUJxqz7-l368FOWhUssbPTXMIBziM/pub?start=false&loop=false&delayms=3000" target="_blank"><b>Modification of a Hexapedal Robot to
+                    Enable Blind Locomotion Across Uneven Terrain</b></a> and the video below!</h3>
+            </div>
+            <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/136807614@N03/22840513072/in/album-72157660815926641/" title="My Algorithm In Action"><img src="https://farm1.staticflickr.com/778/22840513072_b9061e925a_b.jpg"
+                width="1024" height="576" alt="My Algorithm In Action"></a>
+            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <iframe src="https://onedrive.live.com/embed?cid=99F3547D27F3D2EC&resid=99F3547D27F3D2EC%213142&authkey=ACWdJg5s5fhadMA&em=2" width="804" height="654" frameborder="0" scrolling="no"></iframe>
+            <br>
+            <h3>Recently my team, desTROYers, placed first at <a href="http://progfest.calstatela.edu:8080/progfest/scoreboard.html" target="_blank"><b>2016 ProgFest</b></a> at CSULA!</h3>
+            <h1></h1>
+            <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/136807614@N03/albums/72157665078296685" title="ProgFest2016 desTROYers"><img src="https://farm2.staticflickr.com/1652/24616598664_3556663f6d.jpg"
+                width="500" height="491" alt="ProgFest2016 desTROYers"></a>
+            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <br>
+            <br>
+          </div>
+
+          <!-- content for the skillset page -->
+          <section id="skills">
+            <div class="contentdiv" id="skillscontent" style="display:none;">
+              <div class="skillbanner banner shadow-z-2">
+                <div class="bannerpadding">
+                  <h1>What I can do.</h1>
+                  <br>
+                  <h4 style="color: #FFFFFF;">Please, allow me to... Research</h4>
+                </div>
+              </div>
+              <div class="chartpadding">
+                <h3>Programming Languages</h3>
+                <div class="row">
+                  <div class="col-sm-4" style="padding-left: 0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">Desktop</div>
+                      <div class="panel-body">
+                        Java
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        C/C++
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        Python
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        R
+                        <span class="label label-danger" style="float:right;">Learning</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4" style="padding-left: 0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">Mobile</div>
+                      <div class="panel-body">
+                        <i class="fa fa-android"></i>&nbsp;&nbsp;Android
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        <i class="fa fa-apple"></i>&nbsp;&nbsp;iOS
+                        <span class="label label-danger" style="float:right;">Learning</span>
+                      </div>
+                      <hr>
+                    </div>
+                  </div>
+                  <div class="col-sm-4" style="padding-left: 0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">Miscellaneous</div>
+                      <div class="panel-body">
+                        MATLAB
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        Bash
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        Git / SVN
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        UI / UX Design
+                        <span class="label label-warning" style="float:right;">Intermediate</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        Photoshop
+                        <span class="label label-danger" style="float:right;">Learning</span>
+                      </div>
+                      <hr>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Next line -->
+                <h3>Web Development</h3>
+                <div class="row">
+                  <div class="col-sm-4" style="padding-left: 0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">Front-End Development</div>
+                      <div class="panel-body">
+                        HTML
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        CSS
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        JavaScript
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        JQuery
+                        <span class="label label-danger" style="float:right;">Learning</span>
+                      </div>
+                      <hr>
+                    </div>
+                  </div>
+                  <div class="col-sm-4" style="padding-left: 0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">Back-End Development</div>
+                      <div class="panel-body">
+                        Flask
+                        <span class="label label-danger" style="float:right;">Learning</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        Ruby on Rails
+                        <span class="label label-danger" style="float:right;">Learning</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        PHP
+                        <span class="label label-warning" style="float:right;">Intermediate</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4" style="padding-left: 0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">Databases</div>
+                      <div class="panel-body">
+                        MongoDB
+                        <span class="label label-success" style="float:right;">Proficient</span>
+                      </div>
+                      <hr>
+                      <div class="panel-body">
+                        SQL
+                        <span class="label label-danger" style="float:right;">Learning</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Projects Page -->
+          <section id="projects">
+            <div class="contentdiv" id="projectscontent" style="display:none;">
+              <div class="projectbanner banner shadow-z-2">
+                <div class="bannerpadding">
+                  <h1>My Projects and Research</h1>
+                  <br>
+                  <h4 style="color: #007031;">From paper to reality</h4>
+                </div>
+              </div>
+              <div class="contentpadding">
+                <h3><b>Click on the panels for more information.</b></h3>
+                <h4>Click on the circular icons to navigate to the respective link for more information (project website, source code, etc.).<h4>
+                    <br>
+                    <div class="cardcontainer">
+                      <div class="item">
+                        <div class="panel panel-default"><a href="" target="_blank">
+                            <div class="panel-body hoverpanel">
+                              <div class="time-period" style="float:right;">Current</div>
+                              <h3><b>CTO of Seed Group Inc.</b>&nbsp;&nbsp;&nbsp;<span class="label label-success">Ongoing</span></h3>
+                              <p>Leading innovator in all things business.</p>
+                              <br>
+                              <div class="clear"></div>
+                            </div>
+                        </div></a>
+                      </div>
+                      <div class="item">
+                        <div class="panel panel-default"><a href="http://urc.marssociety.org/" target="_blank">
+                            <div class="panel-body hoverpanel">
+                              <div class="time-period" style="float:right;">2016-17 school year</div>
+                              <h3><b>Yonder Dynamics University Rover Competition EE Lead</b>&nbsp;&nbsp;&nbsp;<span class="label label-warning">Completed & Maintained</span></h3>
+                              <p>Competed in URC June, 2017.</p>
+                              <br>
+                              <p class="alignleft">Building with: <a href="http://www.nvidia.com/object/embedded-systems-dev-kits-modules.html" target="_blank"><b>NVIDIA Jetson TX2</b></a>,
+                                <a href="https://store.arduino.cc/product/A000066" target="_blank"><b>Arduino UNO</b></a>, and
+                                <a href="http://beagleboard.org/bone" target="_blank"><b>BeagleBoard</b></a></p>
+                              <div class="clear"></div>
+                            </div>
+                        </div></a>
+                      </div>
+                      <div class="item">
+                        <div class="panel panel-default"><a href="http://romela.org/" target="_blank">
+                            <div class="panel-body hoverpanel">
+                              <div class="time-period" style="float:right;">Summer 2015</div>
+                              <h3><b>RoMeLa Hexapod Research</b>&nbsp;&nbsp;&nbsp;<span class="label label-success">Completed</span></h3>
+                              <p>To Research the autonomous movement of a hexapod without visual feedback.</p>
+                              <br>
+                              <p><a href="https://docs.google.com/presentation/d/1Fki9iEIOhZCA95LUJxqz7-l368FOWhUssbPTXMIBziM/pub?start=false&loop=false&delayms=3000" target="_blank"><b>Project Poster</b></a></p>
+                              <p><a href="https://onedrive.live.com/embed?cid=99F3547D27F3D2EC&resid=99F3547D27F3D2EC%213142&authkey=ACWdJg5s5fhadMA&em=2" target="_blank"><b>Project Presentation PPT</b></a></p>
+                              <br>
+                              <p class="alignleft">Building with: <a href="http://www.trossenrobotics.com/phantomx-ax-hexapod.aspx" target="_blank"><b>PhantomX AX Hexapod Mark II</b></a>,
+                                <a href="http://www.trossenrobotics.com/p/arbotix-robot-controller.aspx" target="_blank"><b>ArbotiX-M Robocontroller</b></a>, and <a href="https://store.arduino.cc/product/A000066" target="_blank"><b>Arduino UNO</b></a></p>
+                              <div class="clear"></div>
+                            </div>
+                        </div></a>
+                      </div>
+                      <!--
+                    <iframe src="https://docs.google.com/presentation/d/1KoaalLXintHiEva01GAS7AxKunVTQlM0LV3NuTmput4/embed?start=false&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe src="https://docs.google.com/presentation/d/1Fki9iEIOhZCA95LUJxqz7-l368FOWhUssbPTXMIBziM/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1536" height="1949" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    -->
+                      <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/136807614@N03/albums/72157660815926641" title="Internship at RoMeLa"><img src="https://farm1.staticflickr.com/666/22784805051_bc21931ac9_b.jpg"
+                          width="1024" height="720" alt="Internship at RoMeLa"></a>
+                      <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                      <br>
+                      <div class="item">
+                        <div class="panel panel-default"><a href="http://romela.org/" target="_blank">
+                            <div class="panel-body hoverpanel">
+                              <div class="time-period" style="float:right;">Current</div>
+                              <h3><b>RoMeLa Bipedal Humanoid</b>&nbsp;&nbsp;&nbsp;<span class="label label-danger">Completed</span></h3>
+                              <p>Researched a more human-like walking motion of humanoid robots. In conjunction with the DARPA Robotics Challenge.</p>
+                              <br>
+                              <p class="alignleft">Researched with: THOR-OP, C++.</p>
+                            </div>
+                        </div></a>
+                      </div>
+                      <div class="item">
+                        <div class="panel panel-default"><a href="http://sparcfire.ics.uci.edu/" target="_blank">
+                            <div class="panel-body hoverpanel">
+                              <div class="time-period" style="float:right;">Summer 2015</div>
+                              <h3><b>SpArcFiRe</b>&nbsp;&nbsp;&nbsp;<span class="label label-warning">Developed</span></h3>
+                              <p>SpArcFiRe (SPiral ARC FInder and REporter) automatically finds spiral arms in an image of a spiral galaxy. The user can upload images and view an array of results and analysis. I helped code the client side interface
+                                to prevent overloading of the server located in UCI. I interned under <a href="http://www.cs.toronto.edu/~wayne/" target="_blank"><b>Dr. Wayne B. Hayes</b></a>.</p>
+                              <br>
+                              <p class="alignleft">Building with: HTML, CSS, PHP.</p>
+                              <p class="alignright">
+                                <a href="http://sparcfire.ics.uci.edu/" target="_blank">Website-->&nbsp;<i class="fa fa-globe fa-2x"></i></a>
+                              </p>
+                              <div class="clear"></div>
+                            </div>
+                        </div></a>
+                      </div>
+                      <div class="item">
+                        <div class="panel panel-default"><a href="http://romela.org/" target="_blank">
+                            <div class="panel-body hoverpanel">
+                              <div class="time-period" style="float:right;">Spring 2015</div>
+                              <h3><b>RoMeLa Mars Rover</b>&nbsp;&nbsp;&nbsp;<span class="label label-warning">Completed & Maintained</span></h3>
+                              <p>A 3:1 scale of Mars Curiosity Rover.</p>
+                              <br>
+                              <p class="alignleft">Building with: Arduino.</p>
+                              <div class="clear"></div>
+                            </div>
+                        </div></a>
+                      </div>
+                      <div class="item">
+                        <div class="panel panel-default"><a href="files/attendance.apk" target="_blank">
+                            <div class="panel-body hoverpanel">
+                              <div class="time-period" style="float:right;">Fall 2014</div>
+                              <h3><b>ZetAttendance</b>&nbsp;&nbsp;&nbsp;<span class="label label-warning">Completed & Maintained</span></h3>
+                              <p>Android application that assists teachers in taking note of attendance status in each period to allow batch processing at the end of school.</p>
+                              <p>Click on the panel to download the apk directly or click the play store button to navigate to Google PlayStore.</p>
+                              <br>
+                              <p class="alignleft">Built With: Android Studio, Eclipse, Java.</p>
+                              <p class="alignright">
+                                <a href="https://github.com/joominyeo/AttendanceApp" target="_blank">Github-->&nbsp;<i class="fa fa-github fa-2x"></i></a>
+                              </p>
+                              <div class="clear"></div>
+                            </div>
+                        </div></a>
+                      </div>
+                      <div class="item">
+                        <div class="panel panel-default"><a href="files/EDITLINK" target="_blank">
+                            <div class="panel-body hoverpanel">
+                              <div class="time-period" style="float:right;">Fall 2014</div>
+                              <h3><b>Troy High School App</b>&nbsp;&nbsp;&nbsp;<span class="label label-warning">Completed & Maintained</span></h3>
+                              <p>Android application for Troy High School in Fullerton,California. This app is created to bring the complicated and hard-to-navigate
+                                school site to mobile setting. </p>
+                              <p>Click on the panel to download the apk directly or click the play store icon to navigate to Google Play Store.</p>
+                              <br>
+                              <p class="alignleft">Built With: Android Studio, Java.</p>
+                              <p class="alignright">
+                                <a href="https://github.com/joominyeo/TroyHighApplication" target="_blank">Github-->&nbsp;<i class="fa fa-github fa-2x"></i></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.chang.troyhigh" target="_blank">Play Store-->&nbsp;<i class="fa fa-android fa-2x"></i></a>
+                              </p>
+                              <div class="clear"></div>
+                            </div>
+                        </div></a>
+                      </div>
+                      <div class="item">
+                        <div class="panel panel-default"><a href="http://coalcal.com" target="_blank">
+                            <div class="panel-body hoverpanel">
+                              <div class="time-period" style="float:right;">Summer 2014</div>
+                              <h3><b>COALCAL Website & Database</b>&nbsp;&nbsp;&nbsp;<span class="label label-warning">Completed & Maintained</span></h3>
+                              <p>COAL(Community Oriented Applied Learning) is a high school student-created and run organization that provides its members with hands on access to careers of their choice and possibly new options.</p>
+                              <br>
+                              <p class="alignleft">Built With: HTML, JavaScript, CSS.</p>
+                              <p class="alignright">
+                                <a href="http://coalcal.com" target="_blank">Website-->&nbsp;<i class="fa fa-globe fa-2x"></i></a>
+                                <a href="https://www.obvibase.com/#table/WMUrM4OCzqoy/*" target="_blank">Database-->&nbsp;<i class="fa fa-globe fa-2x"></i></a>
+                                <a href="https://github.com/joominyeo/coalcalsite" target="_blank">Github-->&nbsp;<i class="fa fa-github fa-2x"></i></a>
+                              </p>
+                              <div class="clear"></div>
+                            </div>
+                        </div></a>
+                      </div>
+                      <div class="item">
+                        <div class="panel panel-default"><a href="https://github.com/joominyeo/android_device_samsung_toro" target="_blank">
+                            <div class="panel-body hoverpanel">
+                              <div class="time-period" style="float:right;">2012~2014</div>
+                              <h3><b>ShinyROM Development</b>&nbsp;&nbsp;&nbsp;<span class="label label-danger">Discontinued</span></h3>
+                              <p>Developed, tested, reported bugs, and gave suggestions for a custom ROM for Verizon Galaxy Nexus(toro) and proudly used it as a daily driver. This ROM allowed the users to enjoy KitKat 4.4.3 on
+                                VZW Galaxy Nexus when it was still in its Jellybean Stage.</p>
+                              <br>
+                              <p class="alignleft">Built With: C, UNIX.</p>
+                              <p class="alignright">
+                                <a href="https://github.com/joominyeo/android_device_samsung_toro" target="_blank">Github-->&nbsp;<i class="fa fa-github fa-2x"></i></a>
+                              </p>
+                              <div class="clear"></div>
+                            </div>
+                        </div></a>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </section>
+          <!--
+                <div class="contentdiv" id="resumecontent" style="display:none;">
+                resume
+              </div>
+            -->
+
+          <!-- Hobby Page -->
+          <!-- content for the "Hobby page" -->
+          <section id="hobby">
+            <div class="contentdiv" id="hobbycontent" style="display:none;">
+              <div class="hobbybanner banner shadow-z-2">
+                <div class="bannerpadding">
+                  <h1>What I do outside the fence. Who I also am.</h1>
+                  <br>
+                  <h4 style="color: #FF5500">Things I like doing.</h4>
+                </div>
+              </div>
+              <div class="contentpadding">
+                <h3>Boy Scouts - <a href="http://www.troop93fullerton.org/" target="_blank"><b>Troop 93 Fullerton, CA</b></a></h3>
+                <h5>My patrol: <a href="http://troop93fullerton.org/wpnewdc/patrols/knights-of-the-round-table/" target="_blank"><b>Knights of The Round Table</b></a></h5>
+                <p> I love hiking and backpacking. As an <a href="http://troop93fullerton.org/wpnewdc/sample-page/eagle-scouts/" target="_blank"><b>Eagle Scout (Jan 8, 2014)</b></a>, I hiked over 350 miles and climbed a total of 5000 feet in
+                  elevation. Camping
+                  helps me clear my head, reflect, and plan for the future.</p>
+                <br>
+                <h3>Cello</h3>
+                <p>I'm very swamped and busy busy because of school, but I still make time to play with my friends. You can never go wrong with a spontaneous meet up with fellow musicians.</p>
+                <br>
+                <a data-flickr-embed="true" href="https://www.flickr.com/photos/136807614@N03/albums/72157662850053515" title="Hobby Page"><img src="https://farm2.staticflickr.com/1466/23885888712_14fa8fca89_b.jpg" width="1024" height="645" alt="Hobby Page"></a>
+                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                <div class="col-sm-4" style="padding-left: 0px;">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">CTS Performances</div>
+                    <div class="panel-body">
+                      <b>God's Grace (?òÎÇò?òÏùò ?Ä??</b>
+                      <span class="label label-danger" style="float:right;"><i class="fa fa-youtube-play" aria-hidden="true"></i></span>
+                    </div>
+                    <hr>
+                    <div class="panel-body">
+                      <a href="https://www.youtube.com/watch?v=vq9w7XBQgZk&feature=youtu.be" target="_blank"><b>Aus Holbergs Zeit Op.40 Praeludium by E. Grieg</b><span class="label label-danger" style="float:right;"><i class="fa fa-youtube-play"
+                            aria-hidden="true"></i></span></a>
+                    </div>
+                    <hr>
+                    <div class="panel-body">
+                      <a href="https://www.youtube.com/watch?v=YcVWIg1mvSw&feature=youtu.be" target="_blank"><b>God Rest Ye Merry Gentlemen by P. Tchaikovsky</b><span class="label label-danger" style="float:right;"><i class="fa fa-youtube-play"
+                            aria-hidden="true"></i></span></a>
+                    </div>
+                    <hr>
+                  </div>
+                </div>
+                <div class="col-sm-4" style="padding-left: 0px;">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">My Favorite Composers and Pieces</div>
+                    <div class="panel-body">
+                      <a href="https://soundcloud.com/joo-min-yeo/nocturne-op-9-no-2-joo-min-yeo/s-7T5iz" target="_blank"><b>Nocturne Op.9, No.2 by Chopin</b><span class="label label-danger" style="float:right;"><i class="fa fa-soundcloud"></i></span></a>
+                    </div>
+                    <hr>
+                    <div class="panel-body">
+                      <a href="https://www.youtube.com/watch?v=8WLIDa9U9Ug" target="_blank"><b>Haydn Concerto No.1 C Major by Joseph Haydn</b><span class="label label-danger" style="float:right;"><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
+                    </div>
+                    <hr>
+                    <div class="panel-body">
+                      <a href="https://soundcloud.com/joo-min-yeo/you-raise-me-up-joo-min-yeo/s-0yeNo" target="_blank"><b>You Raise Me Up</b><span class="label label-danger" style="float:right;"><i class="fa fa-soundcloud"></i></span></a>
+                    </div>
+                    <hr>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                  <h3>Paintings</h3>
+                  <p>My favorite artist is <a href="http://www.pawelkuczynski.com/index.php" target="_blank"><b>Pawel Kuczynski</b></a>. His satirical illustrations, portray many of the problems we face in the modern era in a funny yet alarming way.</p>
+                </div>
+                <br>
+                <div class="row">
+                  <h3>Music</h3>
+                  <p>My Spotify playlists: <a href="https://open.spotify.com/user/joominyeo/playlist/4dQnX5b2oXO96CD3E2lR6k" target="_blank"><b>Playlist</b></a>, and <a href="https://open.spotify.com/user/joominyeo/playlist/61dJhB7OSLEZyWXxMr9jgi"
+                      target="_blank"><b>Time Machine</b></a>.</p>
+                  <iframe src="https://open.spotify.com/embed/user/joominyeo/playlist/4dQnX5b2oXO96CD3E2lR6k" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+                  <iframe src="https://open.spotify.com/embed/user/joominyeo/playlist/61dJhB7OSLEZyWXxMr9jgi" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+                  <p>And if you like EDM, checkout my <a href="https://soundcloud.com/joo-min-yeo/sets/playlist" target="_blank"><b>SoundCloud playlist</b></a>.</p>
+                  <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/248934611&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                </div>
+                <br>
+                <h3>AP Econ Video Project</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/I19f66eXhZE" frameborder="0" allowfullscreen></iframe>
+                <br>
+                <h3>AP Gov Propaganda TV Advertisement Project (Richard Nixon)</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8XZUfNq--UU" frameborder="0" allowfullscreen></iframe>
+                <br>
+                <h3>AP Spanish Video Project</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6xy3YNTQUog" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <!-- End Hobby Page -->
+          </section>
+
+          <!-- Contact Page -->
+          <section id="contact">
+            <div class="contentdiv" id="contactcontent" style="display:none;">
+              <div class="contactbanner banner shadow-z-2">
+                <div class="bannerpadding">
+                  <h1>Contact Me!</h1>
+                  <br>
+                  <h4 style="color:#BEC4C7;">Feel free to contact me if you want to talk about Mechatronics, life, or even just to say hello!</h4>
+                </div>
+              </div>
+              <div class="contentpadding">
+                <h3>Hey, you just met me. This is crazy. Here are my contacts. Email me maybe?</h3>
+                <p><i>Click on a card for a direct link.</i></p>
+                <div class="row">
+                  <div class="col-sm-6" style="padding-left: 0px;">
+                    <div class="cardcontainer">
+                      <div class="item">
+                        <div class="  panel panel-default" style="background-color: #4CAF50; text-align: center; color: white;" onclick="window.open(&#39;mailto:joominyeo@outlook.com&#39;, &#39;emailWindow&#39;);">
+                          <div class="panel-body hoverpanel socialcard">
+                            <i class="fa fa-envelope-o fa-4x"></i>
+                            <br>
+                            <h3>joominyeo@outlook.com</h3>
+                            <br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" style="padding-left: 20px;">
+                    <div class="cardcontainer">
+                      <div class="item">
+                        <div class="  panel panel-default" style="background-color: #2196F3; text-align: center; color: white;">
+                          <div class="panel-body hoverpanel socialcard">
+                            <i class="fa fa-phone fa-4x"></i>
+                            <br>
+                            <h3>Google Voice: +1 (714) 244-2156</h3>
+                            <br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--^end of row-->
+                <div class="row">
+                  <div class="col-sm-6" style="padding-left: 0px;">
+                    <div class="cardcontainer">
+                      <div class="item">
+                        <div class="  panel panel-default" style="background-color: #FF6F00; text-align: center; color: white;" onclick="window.open(&#39;https://github.com/joominyeo&#39;,&#39;mywindow&#39;);">
+                          <div class="panel-body hoverpanel socialcard">
+                            <i class="fa fa-github fa-4x"></i>
+                            <br>
+                            <h3>github.com/joominyeo</h3>
+                            <br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--^end of card-->
+                  <!--Bottom is the start of the Medium Card-->
+
+                  <div class="col-sm-6" style="padding-left: 20px;">
+                    <div class="cardcontainer">
+                      <div class="item">
+                        <div class="panel panel-default" style="background-color: #D50000; text-align: center; color: white;" onclick="window.open(&#39;bitcoin:19vf68FoGNd5M58qB46SHD1xgKavSWmMGi?amount=0.5;);">
+                          <div class="panel-body hoverpanel socialcard">
+                            <i class="fa fa-btc fa-4x"></i>
+                            <br>
+                            <h3>19vf68FoGNd5M58qB46SHD1xgKavSWmMGi</h3>
+                            <br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--End of LinkedIn card. Not added yet-->
+                <!--^end of row-->
+              </div>
+              <!--^end of contentpadding-->
+              <div class="contentpadding">
+                <h3>Where in the world is this guy right now? (Zoom in for more details!)</h3>
+                <div id="map"></div>
+                <script>
+                  // Initialize and add the map
+                  function initMap() {
+                    // The location of ucsd
+                    var ucsd = {
+                      lat: 32.881619,
+                      lng: -117.235473
+                    };
+                    var jpl = {
+                      lat: 34.201592,
+                      lng: -118.171362
+                    };
+                    var eskom = {
+                      lat: -26.224978,
+                      lng: 28.160729
+                    };
+                    var lund = {
+                      lat: 55.711960,
+                      lng: 13.203493
+                    };
+                    var korea = {
+                      lat: 37.514925,
+                      lng: 127.012442
+                    };
+                    // The map, centered at ucsd
+                    var map = new google.maps.Map(
+                      document.getElementById('map'), {
+                        zoom: 3, //5 seems to be a good 'zoomed in' scale, else 2 or 3
+                        center: ucsd
+                      });
+                    // The marker, positioned at ucsd
+                    var marker = new google.maps.Marker({
+                      position: eskom,
+                      map: map
+                    });
+                  }
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATfLGVg06MMyx4zwaWLLNfD4s8AeFWZkM&callback=initMap">
+                </script>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+              </div>
+              <!--^end of second block-->
+            </div>
+            <!--^end of contact section-->
+            <!-- /main -->
+        </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery Version 1.11.0 -->
+  <script src="js/jquery-1.11.0.js"></script>
+
+  <!-- Google Analytics-->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-71787601-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>
