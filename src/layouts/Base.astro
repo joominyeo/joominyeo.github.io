@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
   description?: string;
@@ -30,11 +32,6 @@ const siteTitle = '슬전생';
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title={siteTitle} href="/rss.xml" />
-
-  <!-- Global styles (inlined via Astro build) -->
-  <style>
-    @import '/src/styles/global.css';
-  </style>
 </head>
 <body>
   <div class="layout">
