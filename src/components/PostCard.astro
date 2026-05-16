@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  pubDate: Date;
+  category: string;
+  tags: string[];
+  description?: string;
+}
+
+const { title, slug, pubDate, category, tags, description } = Astro.props;
+const isArchived = pubDate.getFullYear() < 2020;
+const dateStr = pubDate.toLocaleDateString('ko-KR', {
+  year: 'numeric', month: 'long', day: 'numeric'
+});
+---
+
+<article class="post-card">
+  <a href={`/blog/${slug}`} style="text-decoration: none;">
+    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+      {isArchived && <span class="archive-badge">보관됨</span>}
+      <span class="tag">{category}</span>
+    </div>
+    <h2 class="post-card-title">{title}</h2>
+    <div class="post-card-meta">
+      <time datetime={pubDate.toISOString()}>{dateStr}</time>
+      {tags.slice(0, 3).map(tag => <span>#{tag}</span>)}
+    </div>
+    {description && <p class="post-card-excerpt">{description}</p>}
+  </a>
+</article>

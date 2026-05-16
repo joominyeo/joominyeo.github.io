@@ -1,0 +1,72 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="소개" description="Cai (Joomin) Yeo 소개">
+  <Nav />
+  <main class="main-content">
+    <h1 style="font-size: 1.75rem; margin-bottom: 2rem;">소개</h1>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">About Me</h2>
+      <p style="line-height: 1.8; max-width: 620px;">
+        안녕하세요, <strong>Cai (Joomin) Yeo</strong>입니다. 현재 서울 로보틱스(Seoul Robotics)에서
+        인프라 기반 자율주행 시스템 개발을 담당하며 <strong>전문연구요원</strong>으로 복무 중입니다.
+        코넬 대학교(Cornell University) 졸업 후 한국으로 돌아와 국방의 의무를 이행하면서 느낀 것들,
+        그리고 전문연구요원 제도를 처음 접하는 분들이 겪는 어려움을 해소하고자 이 블로그를 시작했습니다.
+      </p>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">경력</h2>
+      <div style="border-left: 2px solid var(--border); padding-left: 1.25rem;">
+        <div style="margin-bottom: 1.25rem;">
+          <strong>Seoul Robotics</strong>
+          <p style="color: var(--text-secondary); font-size: 0.875rem;">
+            Infrastructure-based Autonomous Vehicles · 전문연구요원<br/>
+            Seoul, South Korea
+          </p>
+        </div>
+        <div>
+          <strong>Cornell University</strong>
+          <p style="color: var(--text-secondary); font-size: 0.875rem;">학사 졸업</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">특허</h2>
+      <div class="post-card" style="font-size: 0.875rem;">
+        <strong>US 2026/0031740 A1</strong>
+        <p style="color: var(--text-secondary); margin-top: 0.25rem;">
+          RECONFIGURATION OF DIRECT CURRENT FAST CHARGING POWER ELECTRONIC MODULE
+          TO PERFORM VEHICLE-TO-VEHICLE APPLICATIONS<br/>
+          <em>Issued: Jan 29, 2026</em>
+        </p>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">언어</h2>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <span class="tag">English — Native/Bilingual</span>
+        <span class="tag">Korean — Native/Bilingual</span>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">연락처</h2>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="https://www.linkedin.com/in/joominyeo" class="tag" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+        <a href="https://github.com/joominyeo" class="tag" target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Base>

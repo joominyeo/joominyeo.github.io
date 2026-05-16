@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import PostCard from '../../components/PostCard.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) =>
+  !data.draft && data.pubDate.getFullYear() >= 2020
+))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Base title="블로그">
+  <Nav />
+  <main class="main-content">
+    <h1 style="font-size: 1.75rem; margin-bottom: 2rem;">블로그</h1>
+    {posts.map(post => (
+      <PostCard
+        title={post.data.title}
+        slug={post.slug}
+        pubDate={post.data.pubDate}
+        category={post.data.category}
+        tags={post.data.tags}
+        description={post.data.description}
+      />
+    ))}
+  </main>
+  <Footer />
+</Base>

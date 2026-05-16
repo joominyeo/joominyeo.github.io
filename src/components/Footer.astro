@@ -1,0 +1,24 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer style="
+  margin-left: var(--sidebar-width);
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+">
+  <span>© {year} Cai (Joomin) Yeo</span>
+  <span>슬전생 · Built with Astro</span>
+</footer>
+
+<style>
+  @media (max-width: 768px) {
+    footer { margin-left: 0; }
+  }
+</style>

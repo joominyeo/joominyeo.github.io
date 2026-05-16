@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import PostCard from '../../components/PostCard.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) =>
+  !data.draft && data.pubDate.getFullYear() < 2020
+))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Base title="아카이브" description="2020년 이전 글 목록">
+  <Nav />
+  <main class="main-content">
+    <h1 style="font-size: 1.75rem; margin-bottom: 0.5rem;">아카이브</h1>
+    <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+      2020년 이전에 작성된 글들입니다. ({posts.length}개)
+    </p>
+    {posts.length === 0
+      ? <p style="color: var(--text-secondary);">보관된 글이 없습니다.</p>
+      : posts.map(post => (
+          <PostCard
+            title={post.data.title}
+            slug={post.slug}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            tags={post.data.tags}
+            description={post.data.description}
+          />
+        ))
+    }
+  </main>
+  <Footer />
+</Base>
